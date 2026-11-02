@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab - Learn Web Development</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #14213d;
+        }
+
+        /* 7.1 Navbar using Flexbox */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #12203a;
+            color: white;
+            padding: 25px 3%;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .btn {
+            background-color: #ffb900;
+            color: black;
+            border: none;
+            padding: 15px 28px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 7.2 Centre banner using Flexbox */
+        .banner {
+            background-color: #3159e9;
+            color: white;
+            min-height: 465px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            gap: 25px;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+        }
+
+        .banner p {
+            font-size: 24px;
+        }
+
+        /* 7.3 Cards using Flexbox */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 40px 3%;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            min-width: 0;
+            background-color: #eef2ff;
+            padding: 35px 20px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 17px;
+            }
+
+            .banner {
+                min-height: 350px;
+            }
+
+            .banner h1 {
+                font-size: 34px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+
+            .cards {
+                padding: 25px 5%;
+            }
+
+            .card {
+                flex-basis: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">CodeLab</div>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="btn"
+            onclick="alert('Welcome to CodeLab!')">
+            Sign up
+        </button>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h1>Learn Web Development</h1>
+        <p>Start from zero. Build real projects.</p>
+        <button class="btn"
+            onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
+            Get started
+        </button>
+    </section>
+
+    <!-- Course Cards -->
+    <section class="cards" id="courses">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Build the structure</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Make it beautiful</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Make it smart</p>
+        </div>
+
+        <div class="card">
+            <h2>Git</h2>
+            <p>Save your work</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
